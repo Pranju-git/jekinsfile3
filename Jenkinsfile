@@ -16,7 +16,7 @@ parameters {
 	                 }}
 		stage('Deployment'){
 		   steps {
-		sh 'cp target/jenkinsfile1.war  /home/pranjali/Documents/Devops-software/apache-tomcat-9.0.85/webapps'
+		sh 'cp target/jenkinsfile3.war  /home/pranjali/Documents/Devops-software/apache-tomcat-9.0.85/webapps'
 			}}	
 }}
 
