@@ -25,8 +25,7 @@ parameters {
 			else if ( env.ENVIRONMENT == 'UAT' ){
     		sh 'sshpass -p "admin" scp target/jenkinsfile3.war admin@172.17.0.3:/home/admin/appfiles/apache-tomcat-9.0.85/webapps '
     		echo "deployment has been done on UAT!"
-			}
-			echo "deployment has been done!"
+	             	}
 			
 			
 			}}}	
