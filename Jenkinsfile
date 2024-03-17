@@ -19,11 +19,11 @@ parameters {
 		    steps {
 			script {
 			 if ( env.ENVIRONMENT == 'QA' ){
-        	sh 'cp target/jenkinsfile3.war  /home/pranjali/Documents/Devops-software/apache-tomcat-9.0.85/webapps'
+        	sh 'sshpass -p "admin" scp target/jenkinsfile3.war admin@172.17.0.2:/home/admin/appfiles/apache-tomcat-9.0.85/webapps'
         	echo "deployment has been done on QA!"
 			 }
 			elif ( env.ENVIRONMENT == 'UAT' ){
-    		sh 'cp target/jenkinsfile3.war  /home/pranjali/Documents/Devops-software/apache-tomcat-9.0.85/webapps'
+    		sh 'sshpass -p "admin" scp target/jenkinsfile3.war admin@172.17.0.3:/home/admin/appfiles/apache-tomcat-9.0.85/webapps '
     		echo "deployment has been done on UAT!"
 			}
 			echo "deployment has been done!"
